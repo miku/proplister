@@ -38,18 +38,19 @@ public class Main {
      */
     public static void main(String[] args) throws Exception {
         switch (args.length) {
-        case 1:
-            loadPropertiesWithEncoding(args[0], "ISO-8859-1");
-            break;
-        case 2:
-            loadPropertiesWithEncoding(args[0], args[1]);
-            break;
-        default:
-            System.err.printf("Usage: %s FILE [ENCODING]\n", System.getProperty("sun.java.command"));
-            break;
+            case 1:
+                loadPropertiesWithEncoding(args[0], "ISO-8859-1");
+                break;
+            case 2:
+                loadPropertiesWithEncoding(args[0], args[1]);
+                break;
+            default:
+                System.err.printf("Usage: %s FILE [ENCODING]\n", System.getProperty("sun.java.command"));
+                break;
         }
     }
 
+    /* Load properties file with a given encoding. */
     public static void loadPropertiesWithEncoding(String filename, String encoding) throws Exception {
         File f = new File(filename);
         FileInputStream fis = new FileInputStream(f);
