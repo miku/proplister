@@ -2,7 +2,9 @@ Java Properties With Optional Encoding
 ======================================
 
 ```shell
-mvn package
+$ mvn package
+...
+
 $ java -jar target/proplister-1.0-SNAPSHOT.jar 
 Usage: target/proplister-1.0-SNAPSHOT.jar FILE [ENCODING]
 
